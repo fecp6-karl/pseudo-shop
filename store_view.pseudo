@@ -1,13 +1,11 @@
 # Displays product listings
-function display_products(filters):
 
-    # print header
+function display_products(filters = null):
     print "╔══════════════════════════════════════════╗"
-    print "║          WELCOME TO PSEUDO SHOP          ║
+    print "║          WELCOME TO PSEUDO SHOP          ║"
     print "╚══════════════════════════════════════════╝"
 
-    # check if filter is present
-    if (filters != null):
+    if filters != null:
         print "Active filters applied!"
         display_list = filter_products(filters)
     else:
@@ -16,23 +14,21 @@ function display_products(filters):
 
     print "══════════════════════════════════════════"
 
-
-    # check if list is empty
-    if length of product_list == 0:
+    if length of display_list == 0:
         print "No product found..."
         return
 
-    # display products
     for each product in display_list:
-        print "Product: " + product.name
-        print "Price:   P" + product.price
-        print "Brand:   " + product.brand
-        print "Specs:   " + product.width + "W x " + product.height + "H x " + product.length + "L"
-        print "Details: Color: " + product.color + " | Weight: " + product.weight
+        print "Product Name: " + product.name
+        print "Price: P" + product.price
+        print "Width: " + product.width
+        print "Height: " + product.height
+        print "Length: " + product.length
+        print "Weight: " + product.weight
+        print "Color: " + product.color
+        print "Brand: " + product.brand
         print "══════════════════════════════════════════"
 
-
-# Filters products based on given filter (width, height, length, weight, color, and brand)
 function filter_products(filters):
     get product_list
     filtered_products = []

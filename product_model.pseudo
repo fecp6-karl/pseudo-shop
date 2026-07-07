@@ -1,16 +1,31 @@
 # Handles product data
 
-# Sample structure:
-# product = {
-#     name: "Sample Product",
-#     width: 10,
-#     height: 5,
-#     length: 20,
-#     weight: 1.5,
-#     color: "red",
-#     brand: "Generic"
-# }
+# Product list stores all available products
+product_list = [
+    {
+        name: "Tote Bag",
+        price: 5000,
+        width: 14,
+        height: 16,
+        length: 4,
+        weight: 0.5,
+        color: "Blue",
+        brand: "GCash"
+    }
+]
 
-# Placeholder product list
-product_list = []
+# Add a new product to the product list
+function add_product(name, price, width, height, length, weight, color, brand):
+    new_product = {
+        name: name,
+        price: price,
+        width: width,
+        height: height,
+        length: length,
+        weight: weight,
+        color: color,
+        brand: brand
+    }
 
+    add new_product to product_list
+    return new_product 
