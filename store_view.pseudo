@@ -2,12 +2,6 @@
 function display_products(filters):
 
     #print header
-
-    #if condition if filter is present, else show listings
-
-    #if there is empty list -> return
-
-    #for loop where each product in display, add the display layout
-
-
-
+    print "╔══════════════════════════════════════════╗"
+    print "║          WELCOME TO PSEUDO SHOP          ║
+    print "╚══════════════════════════════════════════╝"
