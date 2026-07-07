@@ -1,15 +1,37 @@
 # Displays product listings
 
-# Displays all products in the store
+function display_products(filters = null):
+    print "╔══════════════════════════════════════════╗"
+    print "║          WELCOME TO PSEUDO SHOP          ║"
+    print "╚══════════════════════════════════════════╝"
 
-function display_products():
-    for each product in product_list:
+    if filters != null:
+        print "Active filters applied!"
+        display_list = filter_products(filters)
+    else:
+        print "Showing full product list.."
+        display_list = product_list
+
+    print "══════════════════════════════════════════"
+
+    if length of display_list == 0:
+        print "No product found..."
+        return
+
+    for each product in display_list:
         print "Product Name: " + product.name
-        print "Price: " + product.price
+        print "Price: P" + product.price
         print "Width: " + product.width
         print "Height: " + product.height
         print "Length: " + product.length
         print "Weight: " + product.weight
         print "Color: " + product.color
         print "Brand: " + product.brand
-        print "--------------------" 
+        print "══════════════════════════════════════════"
+
+function filter_products(filters):
+    get product_list
+    filtered_products = []
+    for each product_filtered in product_list.filters:
+        append to filtered_products
+    return filtered_products
