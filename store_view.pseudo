@@ -32,3 +32,10 @@ function display_products(filters):
         print "══════════════════════════════════════════"
 
 
+# Filters products based on given filter (width, height, length, weight, color, and brand)
+function filter_products(filters):
+    get product_list
+    filtered_products = []
+    for each product_filtered in product_list.filters:
+        append to filtered_products
+    return filtered_products
