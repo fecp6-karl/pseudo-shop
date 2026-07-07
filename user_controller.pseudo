@@ -1,7 +1,8 @@
 # Handles user signup and login
 # Sample user model
 # user = {
-#	username: "hello123"
+#	userName: "hello123"
+#	userEmail "test@mail.com"
 #	password_hash: "ASDSDH91982JFABASJDXN!)9023"
 # }
 #
