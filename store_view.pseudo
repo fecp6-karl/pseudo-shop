@@ -5,3 +5,20 @@ function display_products(filters):
     print "╔══════════════════════════════════════════╗"
     print "║          WELCOME TO PSEUDO SHOP          ║
     print "╚══════════════════════════════════════════╝"
+
+    #if condition if filter is present, else show listings
+    if (filters != null):
+        print "Active filters applied!"
+        display_list = filter_products(filters)
+    else:
+        print "Showing full product list.."
+        display_list = product_list
+
+    print "══════════════════════════════════════════"
+
+
+    #if there is empty list -> return
+    if length of product_list == 0:
+        print "No product found..."
+        return
+
