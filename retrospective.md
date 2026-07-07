@@ -1,27 +1,22 @@
-# Final Project Retrospective
+# Retrospective Report
 
-## Team Members
-- Student 1:
-- Student 2:
+Each team must submit a reflection report in markdown format, included in the root of the repo. This file should answer the following questions:
 
-## 1. How did you divide the work between you and your partner?
-_(Who worked on which features? How was the work assigned or negotiated?)_
+## Required Questions
 
-## 2. What Git strategies or commands helped you most during the project?
-_(E.g., branching, rebasing, frequent commits, etc.)_
+### 1. How did your team divide the work?
 
-## 3. Describe a merge conflict you encountered. What caused it and how did you resolve it?
-_(Include any lessons learned or techniques used to resolve the issue.)_
 
-## 4. What were the biggest challenges you faced as a team?
-_(This can include communication, Git usage, or coordination.)_
+### 2. What Git commands or workflows were most useful to you?
 
-## 5. What did you learn about using Git in a collaborative setting?
-_(Any insights or habits you’d apply in future projects?)_
 
-## 6. How would you improve your workflow next time?
-_(Think about technical habits and teamwork practices.)_
+### 3. Describe the merge conflict your team encountered. What caused it and how did you resolve it?
 
-## 7. Optional: Any feedback on the activity?
-_(What worked well? What was confusing or could be improved?)_
 
+### 4. What were the biggest challenges during this activity?
+
+
+### 5. What did you learn about using Git in a team setting?
+
+
+### 6. How would you improve your workflow in future projects?
