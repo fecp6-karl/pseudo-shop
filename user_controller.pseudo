@@ -1,5 +1,10 @@
 # Handles user signup and login
-
+# Sample user model
+# user = {
+#	username: "hello123"
+#	password_hash: "ASDSDH91982JFABASJDXN!)9023"
+# }
+#
 # Placeholder function signatures:
 # function create_user(name, email, password)
 # function login_user(email, password)
