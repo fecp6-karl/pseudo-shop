@@ -4,6 +4,7 @@
 #	email: "hello@g.com",
 #	username: "hello123",
 #	password_hash: "ASDSDH91982JFABASJDXN!)9023"
+#	last_login: Date(2022-01-01)
 # }
 #
 # Placeholder function signatures:
