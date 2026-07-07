@@ -5,6 +5,7 @@
 
 # Filters products based on given filter (width, height, length, weight, color, and brand)
 function filter_products(filters):
+    get product_list
     sort product_list.filters by descending
     assign sorted list to a filtered_products variable
     return filtered_products
