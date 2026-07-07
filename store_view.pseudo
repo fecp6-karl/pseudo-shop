@@ -1,12 +1,12 @@
 # Displays product listings
 function display_products(filters):
 
-    #print header
+    # print header
     print "╔══════════════════════════════════════════╗"
     print "║          WELCOME TO PSEUDO SHOP          ║
     print "╚══════════════════════════════════════════╝"
 
-    #if condition if filter is present, else show listings
+    # check if filter is present
     if (filters != null):
         print "Active filters applied!"
         display_list = filter_products(filters)
@@ -17,11 +17,12 @@ function display_products(filters):
     print "══════════════════════════════════════════"
 
 
-    #if there is empty list -> return
+    # check if list is empty
     if length of product_list == 0:
         print "No product found..."
         return
 
+    # display products
     for each product in display_list:
         print "Product: " + product.name
         print "Price:   P" + product.price
