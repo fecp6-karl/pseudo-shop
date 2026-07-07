@@ -1,5 +1,13 @@
 # Displays product listings
+function display_products(filters):
 
-# Placeholder function:
-# function display_products()
+    #print header
+
+    #if condition if filter is present, else show listings
+
+    #if there is empty list -> return
+
+    #for loop where each product in display, add the display layout
+
+
 
