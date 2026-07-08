@@ -1,7 +1,8 @@
-# Run the app
-print "Welcome to the Pseudo Shop!"
+###############
+# main.pseudo #
+###############
+# Main entrypoint for pseudo-shop 
 
-# Insert Feature 2: User registration and login
 action = 0
 
 print "╔══════════════════════════════════════════╗"
