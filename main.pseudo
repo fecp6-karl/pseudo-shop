@@ -1,8 +1,18 @@
-# Main entry point
-
-# This file ties together all components of the pseudo-shop
-# Feel free to modify this to simulate application flow
-
 # Run the app
 print "Welcome to the Pseudo Shop!"
 
+# Insert Feature 2: User registration and login
+
+# Insert Feature 3: Product creation and listings
+
+# Feature 4: Display storefront (full list)
+display_products()
+
+
+# Feature 1: Filter products by attributes 
+# sample filter
+filters = {
+    color: "Black"
+}
+
+display_products(filters)
