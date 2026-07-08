@@ -1,3 +1,7 @@
+#####################
+# user_model.pseudo #
+#####################
+# Represents user data in app
 # Sample User model
 # user = {
 #     email: "hello@g.com",
@@ -6,6 +10,9 @@
 #	  last_login: Date(2022-01-01)
 # }
 
+### User ###############
+# Represents user data #
+########################
 class User {
     email: string,
     username: string,
