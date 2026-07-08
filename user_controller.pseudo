@@ -12,6 +12,26 @@
 # Placeholder total user list
 total_users = []
 
+function get_user_by_email(email):
+    for user in total_users:
+        if user.email == email:
+            return user
+            
+    return null
+
+function verify_hash(password, stored_hash):
+    hashed_password = hash(password)
+    
+    if hashed_password == stored_hash:
+        return true
+        
+    return false
+
+function generate_auth_token(username):
+    raw_token = username + "_" + current_time()
+    
+    return hash(raw_token)
+
 function create_user(name, email, password):
 	if name is empty:
 		return Error(422, "Name must not be empty.")
@@ -33,21 +53,19 @@ function create_user(name, email, password):
 
 # function login_user(email, password)
 
-FUNCTION login_user(email, password)
-    user = total_users.get_user_by_email(email)
+function login_user(email, password):
+    user = get_user_by_email(email)
 
-    if user == NULL then
-        return ERROR("Invalid email or password")
-    end if
+    if user is null:
+        return Error(401, "Invalid email or password")
 
     password_matches = verify_hash(password, user.password_hash)
 
-    if password_matches == FALSE then
-        return ERROR("Invalid email or password")
-    end if
+    if password_matches is false:
+        return Error(401, "Invalid email or password")
 
+    user.last_login = current_date() 
     auth_token = generate_auth_token(user.username)
 
-    return SUCCESS(auth_token)
-END FUNCTION
+    return auth_token
 
