@@ -1,3 +1,11 @@
+#############################
+# product_controller.pseudo #
+#############################
+# Handles product management operations
+
+### product_list ################
+# Stores all available products #
+#################################
 product_list = [
     {
         name: "Tote Bag",
@@ -11,6 +19,9 @@ product_list = [
     }
 ]
 
+### add_product #########################
+# Add a new product to the product list #
+#########################################
 function add_product(name, price, width, height, length, weight, color, brand):
     if name is empty:
 		return Error(422, "Name must not be empty.")
