@@ -1,19 +1,14 @@
-# Handles user signup and login
-# Sample user model
-# user = {
-#	email: "hello@g.com",
-#	username: "hello123",
-#	password_hash: "ASDSDH91982JFABASJDXN!)9023"
-#	last_login: Date(2022-01-01)
-# }
-#
-# Placeholder function signatures:
-
-# Placeholder total user list
-total_users = []
+users_list = [
+    {
+        email: "hello@g.com",
+	    username: "hello123",
+	    password_hash: "ASDSDH91982JFABASJDXN!9023"
+	    last_login: Date(2022-01-01)
+    }
+]
 
 function get_user_by_email(email):
-    for user in total_users:
+    for each user in users_list:
         if user.email == email:
             return user
             
@@ -45,13 +40,16 @@ function create_user(name, email, password):
 	if password is empty:
 		return Error(422, "Password must not be empty")
 
-	total_users.insert({
+    new_user = {
 		email: email,
 		username: name,
 		password_hash: hash(password),
-	})
+	}
 
-# function login_user(email, password)
+	users_list.insert(new_user)
+
+    return Success(201, new_user)
+
 
 function login_user(email, password):
     user = get_user_by_email(email)
