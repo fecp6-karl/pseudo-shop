@@ -2,17 +2,61 @@
 print "Welcome to the Pseudo Shop!"
 
 # Insert Feature 2: User registration and login
+action = 0
 
-# Insert Feature 3: Product creation and listings
+print "╔══════════════════════════════════════════╗"
+print "║          WELCOME TO PSEUDO SHOP          ║"
+print "╚══════════════════════════════════════════╝"
+print "1. Create Account"
+print "2. Log In"
+print "3. Browse Products" 
+print "0. Exit"
+print "Enter your action: "
+input action
 
-# Feature 4: Display storefront (full list)
-display_products()
+if action == 1:
+    name = ""
+    email = ""
+    password = ""
 
+    print "Enter your username: "
+    input name
 
-# Feature 1: Filter products by attributes 
-# sample filter
-filters = {
-    color: "Black"
-}
+    print "Enter your email: "
+    input email
 
-display_products(filters)
+    print "Enter your password: "
+    input name
+
+    create_user(name, email, password)
+else if action == 2:
+    email = ""
+    password = ""
+
+    print "Enter your email: "
+    input email
+
+    print "Enter your password: "
+    input password
+else if action == 3:
+    filters = []
+
+    filter_attribute = ""
+    filter_value = ""
+
+    do:
+        print "Filter by: "
+        input filter_attribute
+
+        print "Enter value for " + filter_attribute + ": "
+        input filter_value
+
+        filters.insert({
+            attribute: filter_attribute,
+            expected_value: filter_value
+        })
+    while filter_by != ""
+
+    display_products(filters)    
+else:
+    exit
