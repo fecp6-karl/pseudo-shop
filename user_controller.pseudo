@@ -1,24 +1,23 @@
-# Handles user signup and login
-# Sample user model
-# user = {
-#	email: "hello@g.com",
-#	username: "hello123",
-#	password_hash: "ASDSDH91982JFABASJDXN!)9023"
-#	last_login: Date(2022-01-01)
-# }
-#
-# Placeholder function signatures:
+##########################
+# user_controller.pseudo #
+##########################
+# Handles user management operations
 
-# Placeholder total user list
-total_users = []
+### user_list #################
+# Stores all registered users #
+###############################
+users_list = [
+    {
+        email: "hello@g.com",
+	    username: "hello123",
+	    password_hash: "ASDSDH91982JFABASJDXN!9023"
+	    last_login: Date(2022-01-01)
+    }
+]
 
-function get_user_by_email(email):
-    for user in total_users:
-        if user.email == email:
-            return user
-            
-    return null
-
+### verify_hash #########################
+# Verifies password against stored hash #
+#########################################
 function verify_hash(password, stored_hash):
     hashed_password = hash(password)
     
@@ -27,32 +26,50 @@ function verify_hash(password, stored_hash):
         
     return false
 
+### generate_auth_token ######################
+# Creates identity token for logged in users #
+##############################################
 function generate_auth_token(username):
     raw_token = username + "_" + current_time()
     
     return hash(raw_token)
 
+### create_user ########
+# Registers a new user #
+########################
 function create_user(name, email, password):
 	if name is empty:
 		return Error(422, "Name must not be empty.")
 
-	if email is empty:
-		return Error(422, "Email must not be empty.")
-
-	if email is not valid email:
-		return Error(422, "Email must be a valid email")
+	if email is empty or email is not valid email:
+		return Error(422, "Email must be a valid email address.")
 
 	if password is empty:
 		return Error(422, "Password must not be empty")
 
-	total_users.insert({
+    new_user = {
 		email: email,
 		username: name,
 		password_hash: hash(password),
-	})
+	}
 
-# function login_user(email, password)
+	users_list.insert(new_user)
 
+    return Success(201, new_user)
+
+### get_user_by_email #####################
+# Retrieves a user by email, if it exists #
+###########################################
+function get_user_by_email(email):
+    for each user in users_list:
+        if user.email == email:
+            return user
+            
+    return null
+
+### login_user ############################
+# Logs in user using provided credentials #
+###########################################
 function login_user(email, password):
     user = get_user_by_email(email)
 
@@ -61,7 +78,7 @@ function login_user(email, password):
 
     password_matches = verify_hash(password, user.password_hash)
 
-    if password_matches is false:
+    if password_matches == false:
         return Error(401, "Invalid email or password")
 
     user.last_login = current_date() 
