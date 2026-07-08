@@ -1,5 +1,3 @@
-# Displays product listings
-
 function display_products(filters = null):
     print "╔══════════════════════════════════════════╗"
     print "║          WELCOME TO PSEUDO SHOP          ║"
@@ -14,7 +12,7 @@ function display_products(filters = null):
 
     print "══════════════════════════════════════════"
 
-    if length of display_list == 0:
+    if display_list.length() == 0:
         print "No product found..."
         return
 
@@ -29,18 +27,17 @@ function display_products(filters = null):
         print "Brand: " + product.brand
         print "══════════════════════════════════════════"
 
-
-# filter products
 function filter_products(filters):
     filtered_products = []
 
     for each product in product_list:
-        matches_all = true
+        matches_all_filters = true
 
         for each attribute, expected_value in filters:
             if product[attribute] != expected_value:
-                matches_all = false
+                matches_all_filters = false
 
-            if matches_all == true:
-                add product to filtered_products
+            if matches_all_filters:
+                filtered_products.insert(product)
+
     return filtered_products
