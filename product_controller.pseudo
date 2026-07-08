@@ -24,11 +24,8 @@ function add_product(name, price, width, height, length, weight, color, brand):
     if length < 0:
 		return Error(422, "Length must be a valid number greater than 0.")
 
-    if color is empty:
-		return Error(422, "Height must be a valid number greater than 0.")
-
-    if brand is empty:
-		return Error(422, "Brand must not be empty.")
+    if weight < 0:
+		return Error(422, "Weight must be a valid number greater than 0.")
 
     new_product = {
         name: name,
