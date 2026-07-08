@@ -1,0 +1,46 @@
+product_list = [
+    {
+        name: "Tote Bag",
+        price: 5000,
+        width: 14,
+        height: 16,
+        length: 4,
+        weight: 0.5,
+        color: "Blue",
+        brand: "GCash"
+    }
+]
+
+function add_product(name, price, width, height, length, weight, color, brand):
+    if name is empty:
+		return Error(422, "Name must not be empty.")
+
+    if price is empty or price < 0:
+		return Error(422, "Price must be a valid number greater than 0.")
+
+    if height < 0:
+		return Error(422, "Height must be a valid number greater than 0.")
+
+    if length < 0:
+		return Error(422, "Length must be a valid number greater than 0.")
+
+    if color is empty:
+		return Error(422, "Height must be a valid number greater than 0.")
+
+    if brand is empty:
+		return Error(422, "Brand must not be empty.")
+
+    new_product = {
+        name: name,
+        price: price,
+        width: width,
+        height: height,
+        length: length,
+        weight: weight,
+        color: color,
+        brand: brand
+    }
+
+    product_list.insert(new_product)
+
+    return new_product 

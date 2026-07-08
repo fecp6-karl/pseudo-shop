@@ -1,31 +1,22 @@
-# Handles product data
+# Sample Product model
+# product = {
+#     name: "Tote Bag",
+#     price: 5000,
+#     width: 14,
+#     height: 16,
+#     length: 4,
+#     weight: 0.5,
+#     color: "Blue",
+#     brand: "GCash"
+# }
 
-# Product list stores all available products
-product_list = [
-    {
-        name: "Tote Bag",
-        price: 5000,
-        width: 14,
-        height: 16,
-        length: 4,
-        weight: 0.5,
-        color: "Blue",
-        brand: "GCash"
-    }
-]
-
-# Add a new product to the product list
-function add_product(name, price, width, height, length, weight, color, brand):
-    new_product = {
-        name: name,
-        price: price,
-        width: width,
-        height: height,
-        length: length,
-        weight: weight,
-        color: color,
-        brand: brand
-    }
-
-    add new_product to product_list
-    return new_product 
+class Product {
+    name: string,
+    price: number,
+    width: number,
+    height: number,
+    length: number,
+    weight: number,
+    color: string,
+    brand: string
+}
