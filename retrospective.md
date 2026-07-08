@@ -14,6 +14,7 @@ Among 5 members, 3 were assigned to features 1,3, and 4 while the remaining 2 we
 
 ## 2. What Git strategies or commands helped you most during the project?
 _(E.g., branching, rebasing, frequent commits, etc.)_
+Since a few of us were working on similar features, branching really helped us since we could work on our tasks without stepping on each other's changes. Since we were required to have at least 3 commits per feature, we built the habit of frequent commits instead of waiting until the full feature is done. Because our commits were small, when something breaks then we could actually know which changes caused it instead of searching through one big commit.  Since we were always doing commits, there were a few times we committed too soon or wrote a wrong message during 'git commit -m', so 'git reset --soft' also saved us because it lets us undo the commit but still keep our actual edits so we didn't lose any work while fixing that mistake.'git log' or 'git log --oneline --graph --all' was also useful to see what each of us were doing. That's why descriptive commit messages helped everytime we read the history of what we've done. In addition, constantly checking 'git status' helped to know which files were staged, unstaged, or untracked (but the VSCode built-in source control also helps with this).
 
 ## 3. Describe a merge conflict you encountered. What caused it and how did you resolve it?
 _(Include any lessons learned or techniques used to resolve the issue.)_
