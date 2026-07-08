@@ -23,10 +23,18 @@ _(This can include communication, Git usage, or coordination.)_
 
 ## 5. What did you learn about using Git in a collaborative setting?
 _(Any insights or habits you’d apply in future projects?)_
+- It is important to have a centralized checklist, to-do-list, or ticketing system for features to be implemented. Having an actual work plan helps streamline the workflow and collaboration, and most importantly avoids redundant work by having a clear implementation sequence.
+- git can significantly help in collaboration, provided everyone has a clear understanding of how it works, how the workflow works, and how the project is structured. git is just a tool; it's effectiveness greatly depends on its users.
+- To avoid divergent code and general conflict issues, it is important to discuss potential overlaps among team members, to make use of git's features such as branching, NEVER force-pushing, and to just keep commits small and targeted.
+
 
 ## 6. How would you improve your workflow next time?
 _(Think about technical habits and teamwork practices.)_
+- Communication is KEY! Plan ahead, discuss and distribute work, and have a stringent review process. Development is not the most difficult part of the job: knowing what exactly to develop is.
+- Have consistent conventions and make sure that the team strictly follows it. From branch naming to actual code implementation, to merging timelines and code/PR reviews, things are easier if everyone is onboard with the same ideas and patterns in mind.
+- Keep commits small and targeted to specific features, and create branches for specific tasks: this avoids code divergence and conflicts, as well as making it easy to understand how the codebase evolved, and ensuring that things can be rolled back easily when things go wrong.
 
 ## 7. Optional: Any feedback on the activity?
 _(What worked well? What was confusing or could be improved?)_
-
+- Working with pseudo code was quite difficult: every team member had a different approach to pseudocode, which led to a multiple passes of code consistency reviews after the initial compliance to the git branching and workflow management requirements were met.
+- The bare-bones project structure led to some conflicts on how deep and serious the implementation logic is supposed to be, as opposed to simply mimicing collaborative git workflow.
