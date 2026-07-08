@@ -1,3 +1,11 @@
+#####################
+# store_view.pseudo #
+#####################
+# Renders store features to end user
+
+### display_products ######################
+# Displays products and allows filtering  #
+###########################################
 function display_products(filters = null):
     print "╔══════════════════════════════════════════╗"
     print "║          WELCOME TO PSEUDO SHOP          ║"
@@ -27,6 +35,9 @@ function display_products(filters = null):
         print "Brand: " + product.brand
         print "══════════════════════════════════════════"
 
+### filter_products #######################
+# Helper function for filtering products  #
+###########################################
 function filter_products(filters):
     filtered_products = []
 
