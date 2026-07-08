@@ -29,9 +29,18 @@ function display_products(filters = null):
         print "Brand: " + product.brand
         print "══════════════════════════════════════════"
 
+
+# filter products
 function filter_products(filters):
-    get product_list
     filtered_products = []
-    for each product_filtered in product_list.filters:
-        append to filtered_products
+
+    for each product in product_list:
+        matches_all = true
+
+        for each attribute, expected_value in filters:
+            if product[attribute] != expected_value:
+                matches_all = false
+
+            if matches_all == true:
+                add product to filtered_products
     return filtered_products
